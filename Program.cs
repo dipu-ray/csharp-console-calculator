@@ -4,6 +4,7 @@ public class Program
 {
     public static void Main(string[] args)
     {
+        // Display the menu
         Console.WriteLine("===== Calculator =====");
         Console.WriteLine("1. Add");
         Console.WriteLine("2. Subtract");
@@ -18,5 +19,15 @@ public class Program
         double num1 = Convert.ToDouble(Console.ReadLine());
         Console.Write("Enter second number: ");
         double num2 = Convert.ToDouble(Console.ReadLine());
+
+        // Perform the selected operation
+        switch (choice)
+        {
+            // Add or Summation
+            case "1":
+                double sum = num1 + num2;
+                Console.WriteLine("Result: " + sum);
+                break;
+        }
     }
 }
