@@ -101,6 +101,46 @@ public class Program
                     }
                     break;
 
+                // Multiply
+                case "3":
+                    bool multiplying = true;
+
+                    while (multiplying)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("===== Multiply =====");
+                        Console.Write("Enter first number: ");
+                        double mulNum1 = Convert.ToDouble(Console.ReadLine());
+                        Console.Write("Enter second number: ");
+                        double mulNum2 = Convert.ToDouble(Console.ReadLine());
+                        double product = mulNum1 * mulNum2;
+                        Console.WriteLine("Result: " + product);
+
+                        // Ask what to do next (repeat until the input is valid)
+                        string mulNext;
+                        while (true)
+                        {
+                            Console.WriteLine();
+                            Console.WriteLine("1. Multiply again");
+                            Console.WriteLine("2. Back to Home");
+                            Console.Write("Choose an option: ");
+                            mulNext = Console.ReadLine();
+
+                            if (mulNext == "1" || mulNext == "2")
+                            {
+                                break;
+                            }
+
+                            Console.WriteLine("Invalid choice! Please enter 1 or 2.");
+                        }
+
+                        if (mulNext == "2")
+                        {
+                            multiplying = false;
+                        }
+                    }
+                    break;
+
                 // Exit the program (with confirmation)
                 case "0":
                     string confirm;
