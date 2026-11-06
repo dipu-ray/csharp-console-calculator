@@ -29,14 +29,10 @@ public class Program
                     {
                         Console.Clear();
                         Console.WriteLine("===== Add =====");
-
-                        // Get two numbers from the user
                         Console.Write("Enter first number: ");
                         double num1 = Convert.ToDouble(Console.ReadLine());
                         Console.Write("Enter second number: ");
                         double num2 = Convert.ToDouble(Console.ReadLine());
-
-                        // Show the result
                         double sum = num1 + num2;
                         Console.WriteLine("Result: " + sum);
 
@@ -52,7 +48,7 @@ public class Program
 
                             if (next == "1" || next == "2")
                             {
-                                break; // Valid input, stop asking
+                                break;
                             }
 
                             Console.WriteLine("Invalid choice! Please enter 1 or 2.");
@@ -60,7 +56,47 @@ public class Program
 
                         if (next == "2")
                         {
-                            adding = false; // Leave the Add section, return to Home
+                            adding = false;
+                        }
+                    }
+                    break;
+
+                // Subtract
+                case "2":
+                    bool subtracting = true;
+
+                    while (subtracting)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("===== Subtract =====");
+                        Console.Write("Enter first number: ");
+                        double subNum1 = Convert.ToDouble(Console.ReadLine());
+                        Console.Write("Enter second number: ");
+                        double subNum2 = Convert.ToDouble(Console.ReadLine());
+                        double difference = subNum1 - subNum2;
+                        Console.WriteLine("Result: " + difference);
+
+                        // Ask what to do next (repeat until the input is valid)
+                        string subNext;
+                        while (true)
+                        {
+                            Console.WriteLine();
+                            Console.WriteLine("1. Subtract again");
+                            Console.WriteLine("2. Back to Home");
+                            Console.Write("Choose an option: ");
+                            subNext = Console.ReadLine();
+
+                            if (subNext == "1" || subNext == "2")
+                            {
+                                break;
+                            }
+
+                            Console.WriteLine("Invalid choice! Please enter 1 or 2.");
+                        }
+
+                        if (subNext == "2")
+                        {
+                            subtracting = false;
                         }
                     }
                     break;
@@ -79,7 +115,7 @@ public class Program
 
                         if (confirm == "1" || confirm == "2")
                         {
-                            break; // Valid input, stop asking
+                            break;
                         }
 
                         Console.WriteLine("Invalid choice! Please enter 1 or 2.");
@@ -87,10 +123,10 @@ public class Program
 
                     if (confirm == "1")
                     {
+                        Console.WriteLine();
                         Console.WriteLine("Thanks for using Console Calculator and see you next time!");
-                        running = false; // End the program
+                        running = false;
                     }
-                    // If 2, the loop continues and shows the Home menu again
                     break;
             }
         }
