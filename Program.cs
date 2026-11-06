@@ -24,7 +24,6 @@ public class Program
                 // Add or Summation
                 case "1":
                     bool adding = true;
-
                     while (adding)
                     {
                         Console.Clear();
@@ -45,15 +44,12 @@ public class Program
                             Console.WriteLine("2. Back to Home");
                             Console.Write("Choose an option: ");
                             next = Console.ReadLine();
-
                             if (next == "1" || next == "2")
                             {
                                 break;
                             }
-
                             Console.WriteLine("Invalid choice! Please enter 1 or 2.");
                         }
-
                         if (next == "2")
                         {
                             adding = false;
@@ -64,7 +60,6 @@ public class Program
                 // Subtract
                 case "2":
                     bool subtracting = true;
-
                     while (subtracting)
                     {
                         Console.Clear();
@@ -85,15 +80,12 @@ public class Program
                             Console.WriteLine("2. Back to Home");
                             Console.Write("Choose an option: ");
                             subNext = Console.ReadLine();
-
                             if (subNext == "1" || subNext == "2")
                             {
                                 break;
                             }
-
                             Console.WriteLine("Invalid choice! Please enter 1 or 2.");
                         }
-
                         if (subNext == "2")
                         {
                             subtracting = false;
@@ -104,7 +96,6 @@ public class Program
                 // Multiply
                 case "3":
                     bool multiplying = true;
-
                     while (multiplying)
                     {
                         Console.Clear();
@@ -125,18 +116,60 @@ public class Program
                             Console.WriteLine("2. Back to Home");
                             Console.Write("Choose an option: ");
                             mulNext = Console.ReadLine();
-
                             if (mulNext == "1" || mulNext == "2")
                             {
                                 break;
                             }
-
                             Console.WriteLine("Invalid choice! Please enter 1 or 2.");
                         }
-
                         if (mulNext == "2")
                         {
                             multiplying = false;
+                        }
+                    }
+                    break;
+
+                // Divide
+                case "4":
+                    bool dividing = true;
+                    while (dividing)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("===== Divide =====");
+                        Console.Write("Enter first number: ");
+                        double divNum1 = Convert.ToDouble(Console.ReadLine());
+                        Console.Write("Enter second number: ");
+                        double divNum2 = Convert.ToDouble(Console.ReadLine());
+
+                        // Check for division by zero
+                        if (divNum2 == 0)
+                        {
+                            Console.WriteLine("Error: Cannot divide by zero.");
+                        }
+                        else
+                        {
+                            double quotient = divNum1 / divNum2;
+                            Console.WriteLine("Result: " + quotient);
+                        }
+
+                        // Ask what to do next (repeat until the input is valid)
+                        string divNext;
+                        while (true)
+                        {
+                            Console.WriteLine();
+                            Console.WriteLine("1. Divide again");
+                            Console.WriteLine("2. Back to Home");
+                            Console.Write("Choose an option: ");
+                            divNext = Console.ReadLine();
+                            if (divNext == "1" || divNext == "2")
+                            {
+                                break;
+                            }
+                            Console.WriteLine("Invalid choice! Please enter 1 or 2.");
+                        }
+                        if (divNext == "2")
+                        {
+                            dividing = false;
                         }
                     }
                     break;
@@ -152,15 +185,12 @@ public class Program
                         Console.WriteLine("2. No, back to Home");
                         Console.Write("Choose an option: ");
                         confirm = Console.ReadLine();
-
                         if (confirm == "1" || confirm == "2")
                         {
                             break;
                         }
-
                         Console.WriteLine("Invalid choice! Please enter 1 or 2.");
                     }
-
                     if (confirm == "1")
                     {
                         Console.WriteLine();
