@@ -10,7 +10,6 @@ public class Program
         {
             // Display the main menu (Home)
             Console.Clear();
-            Console.WriteLine();
             Console.WriteLine("===== Calculator =====");
             Console.WriteLine("1. Add");
             Console.WriteLine("2. Subtract");
@@ -29,7 +28,6 @@ public class Program
                     while (adding)
                     {
                         Console.Clear();
-                        Console.WriteLine();
                         Console.WriteLine("===== Add =====");
 
                         // Get two numbers from the user
@@ -67,10 +65,32 @@ public class Program
                     }
                     break;
 
-                // Exit the program
+                // Exit the program (with confirmation)
                 case "0":
-                    Console.WriteLine("Goodbye!");
-                    running = false;
+                    string confirm;
+                    while (true)
+                    {
+                        Console.WriteLine();
+                        Console.WriteLine("Are you sure you want to exit?");
+                        Console.WriteLine("1. Yes, exit");
+                        Console.WriteLine("2. No, back to Home");
+                        Console.Write("Choose an option: ");
+                        confirm = Console.ReadLine();
+
+                        if (confirm == "1" || confirm == "2")
+                        {
+                            break; // Valid input, stop asking
+                        }
+
+                        Console.WriteLine("Invalid choice! Please enter 1 or 2.");
+                    }
+
+                    if (confirm == "1")
+                    {
+                        Console.WriteLine("Thanks for using Console Calculator and see you next time!");
+                        running = false; // End the program
+                    }
+                    // If 2, the loop continues and shows the Home menu again
                     break;
             }
         }
