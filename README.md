@@ -15,7 +15,7 @@
 ![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
 
 ![Started](https://img.shields.io/badge/Started-30%20Oct%202026-blue?style=for-the-badge&logo=calendar&logoColor=white)
-![Last Updated](https://img.shields.io/badge/Last%20Updated-06%20Nov%202026-orange?style=for-the-badge&logo=githubactions&logoColor=white)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-07%20Nov%202026-orange?style=for-the-badge&logo=githubactions&logoColor=white)
 
 </div>
 
@@ -32,7 +32,7 @@ It was built as the Week 1 mini project of my C# learning journey, applying vari
 |     |                  |                  |
 | --- | ---------------- | ---------------- |
 | 🚀  | **Started**      | 30 October 2026  |
-| 🔄  | **Last updated** | 06 November 2026 |
+| 🔄  | **Last updated** | 07 November 2026 |
 | 📦  | **Version**      | 1.0.0            |
 
 ---
@@ -168,10 +168,8 @@ dotnet run
 
 ```text
 csharp-console-calculator/
-├── Program.cs                     # All application logic
-├── csharp-console-calculator.csproj
-├── .gitignore
-└── README.md
+├── Program.cs      # All application logic
+└── README.md       # Application documentations
 ```
 
 <details>
@@ -211,10 +209,6 @@ csharp-console-calculator/
 - [x] Add, subtract, multiply, divide
 - [x] Input validation and error handling
 - [x] Exit confirmation
-- [ ] Modulus and power operations
-- [ ] Square root
-- [ ] Calculation history
-- [ ] Colored console output
 
 ---
 
